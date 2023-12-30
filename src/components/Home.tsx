@@ -1,0 +1,45 @@
+import React from "react";
+import backgroundImage from "../../src/assets/homebg.png";
+import circleBg1 from "../../src/assets/circle1.png";
+import circleBg2 from "../../src/assets/circle2.png";
+import MyImage from "../../src/assets/avatar.png";
+
+const Home = () => {
+  return (
+    <div
+      className="h-auto bg-cover bg-center rounded-lg p-8 mx-9"
+      style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="flex justify-between my-20 ml-20">
+        <div className="">
+          <h1 className="text-4xl uppercase">Mobile Developer</h1>
+          <h1 className="text-4xl uppercase">React</h1>
+          <h1 className="text-4xl uppercase">Native</h1>
+          <p className="font-thin mt-2 w-80 text-xl">
+            I have been designing beautiful and user friendly interfaces for
+            mobile and web. Designing is my passion and I love it the most.
+          </p>
+          <button className="text-white py-1 px-5 rounded-md bg-green-400 my-6">
+            Read More
+          </button>
+        </div>
+        <div className="mr-20">
+          <div
+            className="w-96 h-96 flex items-center justify-center bg-cover"
+            style={{ backgroundImage: `url(${circleBg2})` }}>
+            <div
+              className="w-80 h-80 bg-cover"
+              style={{ backgroundImage: `url(${circleBg1})` }}>
+              <img
+                className="h-full w-full object-contain"
+                src={MyImage}
+                alt="Your Image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
