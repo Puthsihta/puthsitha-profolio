@@ -7,6 +7,12 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
     },
+    fontFamily: {
+      sans: ["YourFontFamilyName", "sans-serif"],
+      serif: ["AnotherFontFamily", "serif"],
+      popin: ["Popin", "popin"],
+      // Define additional font families as needed
+    },
   },
   plugins: [],
 };

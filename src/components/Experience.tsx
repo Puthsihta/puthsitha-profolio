@@ -7,7 +7,9 @@ import { RiComputerFill } from "react-icons/ri";
 
 const Experience = () => {
   return (
-    <div className="h-auto m-6 bg-cover bg-center rounded-lg p-6">
+    <div
+      id="experience"
+      className="h-auto m-6 bg-cover bg-center rounded-lg p-6">
       <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
         <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
           {/* <!-- Icon --> */}
