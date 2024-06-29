@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="h-auto bg-cover bg-center rounded-lg p-8 mx-9 relative"
+      className="h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <div className="flex justify-between my-20 ml-20">
+      <div className="flex justify-between p-52">
         <div className="transition-opacity duration-1000 delay-500 transform">
           <h1 className="text-4xl uppercase">Mobile Developer</h1>
           <h1 className="text-4xl uppercase">React</h1>
@@ -22,7 +22,7 @@ const Home = () => {
             Read More
           </button>
         </div>
-        <div className="mr-20 transition-opacity duration-1000 delay-500 transform">
+        <div className="transition-opacity duration-1000 delay-500 transform">
           <div
             className="w-96 h-96 flex items-center justify-center bg-cover"
             style={{ backgroundImage: `url(${circleBg2})` }}>

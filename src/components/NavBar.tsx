@@ -10,7 +10,7 @@ const NavBar: React.FC<props> = ({ visible }) => {
         visible
           ? "translate-y-0 opacity-100 fixed"
           : "-translate-y-0 opacity-100 static"
-      } flex z-10 w-screen p-4 mb-9 bg-slate-50 items-center justify-between transition-transform duration-300 ease-in-out md:p-3 sm:p-3`}>
+      } flex z-10 w-screen p-4 bg-gradient-to-b from-slate-100 to-transparent items-center justify-between transition-transform duration-300 ease-in-out md:p-3 sm:p-3`}>
       <h3
         style={{ fontFamily: "AnotherFontFamily" }}
         className="text-green-600 font-bold uppercase md:text-3xl ml-12">
@@ -32,13 +32,6 @@ const NavBar: React.FC<props> = ({ visible }) => {
           <a href="#contact">Contact</a>
         </button>
       </div>
-      {/* <span
-        id="progress-bar"
-        style={{
-          transform: `translateX(${completion - 100}%)`,
-        }}
-        className={`absolute bottom-0 left-0 w-full transition-transform duration-150 h-1 bg-green-500`}
-      /> */}
     </nav>
   );
 };

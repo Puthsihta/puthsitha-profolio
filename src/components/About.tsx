@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="h-auto mx-6 mt-12 items-center justify-between flex p-6">
+      className="h-screen mx-6 mt-12 items-center justify-between flex p-6">
       <div className="h-96 w-96 shadow-md bg-slate-50 rounded-full overflow-hidden">
         <img
           className="object-contain h-full w-full"
