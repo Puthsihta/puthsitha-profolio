@@ -1,11 +1,9 @@
 import React from "react";
-import { useReadingProgress } from "../util/UseReadingProgress";
 interface props {
   visible: boolean;
 }
 
 const NavBar: React.FC<props> = ({ visible }) => {
-  const completion = useReadingProgress();
   return (
     <nav
       className={`${

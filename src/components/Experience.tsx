@@ -1,5 +1,3 @@
-import React from "react";
-import { FaCircle } from "react-icons/fa";
 import { FaSchoolCircleCheck } from "react-icons/fa6";
 import { IoIosSchool } from "react-icons/io";
 import { IoMdCodeWorking } from "react-icons/io";

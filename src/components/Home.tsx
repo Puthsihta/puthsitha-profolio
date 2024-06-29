@@ -1,4 +1,3 @@
-import React from "react";
 import backgroundImage from "../../src/assets/homebg.png";
 import circleBg1 from "../../src/assets/circle1.png";
 import circleBg2 from "../../src/assets/circle2.png";
@@ -33,7 +32,7 @@ const Home = () => {
               <img
                 className="h-full w-full object-contain"
                 src={MyImage}
-                alt="Your Image"
+                alt="bg"
               />
             </div>
           </div>

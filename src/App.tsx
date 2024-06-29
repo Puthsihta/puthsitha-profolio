@@ -9,18 +9,17 @@ import NavBar from "./components/NavBar";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [completion, setCompletion] = useState(0);
 
   useEffect(() => {
     function updateScrollCompletion() {
       // see how much we have scrolled
-      const currentProgress = window.scrollY;
+      // const currentProgress = window.scrollY;
       // see how much total scroll is available
       let scrollHeight = document.body.scrollHeight - window.innerHeight;
       if (scrollHeight) {
-        setCompletion(
-          Number((currentProgress / scrollHeight).toFixed(2)) * 100
-        );
+        // setCompletion(
+        //   Number((currentProgress / scrollHeight).toFixed(2)) * 100
+        // );
       }
     }
     // add scroll event listener

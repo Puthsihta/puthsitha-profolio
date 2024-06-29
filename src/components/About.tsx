@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import MyImage from "../../src/assets/me.jpg";
 import { ProgressBar } from "../util/Progressbar";
 
