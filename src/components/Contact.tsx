@@ -1,20 +1,24 @@
-import React from "react";
-
-const Contact = () => {
+interface props {
+  contactRef: React.MutableRefObject<any>;
+}
+const Contact: React.FC<props> = ({ contactRef }) => {
   return (
     <div
       id="contact"
-      className="h-auto mt-6 p-6 bg-white flex flex-col items-center justify-center space-y-3">
-      <h2 className="text-green-600 font-semibold text-5xl">
+      ref={contactRef}
+      className="h-auto mt-6 p-6 bg-white flex flex-col items-center justify-center space-y-3 relative">
+      <h2 className="text-green-600 font-semibold text-3xl sm:text-5xl">
         Puthsitha Moeurn
       </h2>
-      <h3 className="font-bold text-2xl">
+      <h3 className="font-bold text-lg sm:text-2xl text-center">
         Sangkat Ou Ruessei Ti Pir, Phnom Penh, Cambodia
       </h3>
       <div className="space-x-3 flex">
-        <b className="text-2xl font-semibold">+855 92389497</b>
-        <p className="text-2xl font-normal">|</p>
-        <b className="text-2xl font-semibold">puthsithamouern@gmail.com</b>
+        <b className="text-lg sm:text-2xl font-semibold">+855 92389497</b>
+        <p className="text-lg sm:text-2xl font-normal">|</p>
+        <b className="text-lg sm:text-2xl font-semibold">
+          puthsithamouern@gmail.com
+        </b>
       </div>
       <div className="border-t-2 w-6/12 border-green-600 opacity-30" />
       <div className="space-x-3 flex">

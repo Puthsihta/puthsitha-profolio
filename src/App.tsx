@@ -2,13 +2,17 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import backgroundImage from "../src/assets/bg.png";
 import { useEffect, useState } from "react";
 import { HiChevronUp } from "react-icons/hi";
 import NavBar from "./components/NavBar";
+import React from "react";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const homeRef = React.useRef(null);
+  const aboutRef = React.useRef(null);
+  const experentRef = React.useRef(null);
+  const contactRef = React.useRef(null);
 
   useEffect(() => {
     function updateScrollCompletion() {
@@ -60,12 +64,19 @@ const App = () => {
   return (
     <div
       className="h-auto bg-cover"
-      style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <NavBar visible={isVisible} />
-      <Home />
-      <About />
-      <Experience />
-      <Contact />
+      // style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <NavBar
+        visible={isVisible}
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        experentRef={experentRef}
+        contactRef={contactRef}
+      />
+      <Home homeRef={homeRef} />
+      <About aboutRef={aboutRef} />
+      <Experience experentRef={experentRef} />
+      <Contact contactRef={contactRef} />
       <button
         onClick={scrollToTop}
         className={`${

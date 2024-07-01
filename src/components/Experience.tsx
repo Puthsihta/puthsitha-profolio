@@ -2,12 +2,15 @@ import { FaSchoolCircleCheck } from "react-icons/fa6";
 import { IoIosSchool } from "react-icons/io";
 import { IoMdCodeWorking } from "react-icons/io";
 import { RiComputerFill } from "react-icons/ri";
-
-const Experience = () => {
+interface props {
+  experentRef: React.MutableRefObject<any>;
+}
+const Experience: React.FC<props> = ({ experentRef }) => {
   return (
     <div
       id="experience"
-      className="h-screen m-6 bg-cover bg-center rounded-lg p-6 pt-20">
+      ref={experentRef}
+      className="h-auto m-6 rounded-lg p-6">
       <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
         <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
           {/* <!-- Icon --> */}
@@ -18,7 +21,7 @@ const Experience = () => {
           <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow">
             <div className="flex items-center justify-between space-x-2 mb-1">
               <div className="font-bold text-slate-900">Mobile Developer</div>
-              <time className="font-caveat font-medium text-indigo-500">
+              <time className="font-caveat font-medium text-indigo-500 text-right">
                 December 12 2021 – Present
               </time>
             </div>
@@ -44,7 +47,7 @@ const Experience = () => {
           <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow">
             <div className="flex items-center justify-between space-x-2 mb-1">
               <div className="font-bold text-slate-900">IT Supporter</div>
-              <time className="font-caveat font-medium text-indigo-500">
+              <time className="font-caveat font-medium text-indigo-500 text-right">
                 March 01 2020 – December 24 2020
               </time>
             </div>
@@ -70,7 +73,7 @@ const Experience = () => {
               <div className="font-bold text-slate-900">
                 Bachelor Degree of Computer Science
               </div>
-              <time className="font-caveat font-medium text-indigo-500">
+              <time className="font-caveat font-medium text-indigo-500 text-right">
                 2019 - 2023
               </time>
             </div>
@@ -94,7 +97,7 @@ const Experience = () => {
           <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow">
             <div className="flex items-center justify-between space-x-2 mb-1">
               <div className="font-bold text-slate-900">Pass BaccII</div>
-              <time className="font-caveat font-medium text-indigo-500">
+              <time className="font-caveat font-medium text-indigo-500 text-right">
                 2016-2019
               </time>
             </div>

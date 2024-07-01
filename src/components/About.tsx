@@ -1,11 +1,14 @@
 import MyImage from "../../src/assets/me.jpg";
 import { ProgressBar } from "../util/Progressbar";
-
-const About = () => {
+interface props {
+  aboutRef: React.MutableRefObject<any>;
+}
+const About: React.FC<props> = ({ aboutRef }) => {
   return (
     <div
       id="about"
-      className="h-screen mx-6 mt-12 items-center justify-between flex p-6">
+      ref={aboutRef}
+      className="h-auto sm:h-screen sm:mt-12 flex flex-col-reverse sm:flex-row items-center justify-between p-6">
       <div className="h-96 w-96 shadow-md bg-slate-50 rounded-full overflow-hidden">
         <img
           className="object-contain h-full w-full"
@@ -13,7 +16,7 @@ const About = () => {
           alt="My Profile"
         />
       </div>
-      <div className="w-2/3 bg-gradient-radial from-blue-50  rounded-lg px-40 py-32">
+      <div className="w-full sm:w-2/3 bg-gradient-radial from-blue-50 rounded-lg px-5 py-5 sm:px-40 sm:py-32 mb-5 sm:mb-0">
         <h3 className="text-green-600 font-bold text-3xl mb-1">About Me</h3>
         <p className="font-thin text-xl">
           I’m property Development with considerable experience in react native
