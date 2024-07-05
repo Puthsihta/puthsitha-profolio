@@ -1,23 +1,29 @@
 import MyImage from "../../src/assets/me.jpg";
 import { ProgressBar } from "../util/Progressbar";
+import { Element } from "react-scroll";
+
 interface props {
-  aboutRef: React.MutableRefObject<any>;
+  aboutRef?: React.MutableRefObject<any>;
 }
 const About: React.FC<props> = ({ aboutRef }) => {
   return (
-    <div
+    <Element
+      name="about"
       id="about"
-      ref={aboutRef}
-      className="h-auto sm:h-screen sm:mt-12 flex flex-col-reverse sm:flex-row items-center justify-between p-6">
-      <div className="h-96 w-96 shadow-md bg-slate-50 rounded-full overflow-hidden">
+      className="h-auto sm:h-full flex flex-col-reverse sm:flex-row items-center justify-between p-6 sm:p-0 sm:pt-32 bg-slate-50">
+      <div
+        // data-aos="zoom-out-right"
+        className="w-72 h-72 sm:h-96 sm:w-96 shadow-md bg-slate-50 rounded-full overflow-hidden sm:ml-24 transition-opacity duration-1000 delay-500 transform">
         <img
           className="object-contain h-full w-full"
           src={MyImage}
           alt="My Profile"
         />
       </div>
-      <div className="w-full sm:w-2/3 bg-gradient-radial from-blue-50 rounded-lg px-5 py-5 sm:px-40 sm:py-32 mb-5 sm:mb-0">
-        <h3 className="text-green-600 font-bold text-3xl mb-1">About Me</h3>
+      <div
+        // data-aos="zoom-out-left"
+        className="w-full sm:w-2/3 bg-gradient-radial from-blue-50 rounded-lg px-5 py-5 sm:px-40 sm:py-0 mb-5 sm:mb-0 transition-opacity duration-1000 delay-500 transform">
+        <h3 className="text-green-600 font-bold text-2xl mb-1">About Me</h3>
         <p className="font-thin text-xl">
           I’m property Development with considerable experience in react native
           develop property such as many kind of app, e-commerce, education,
@@ -37,7 +43,7 @@ const About: React.FC<props> = ({ aboutRef }) => {
           <ProgressBar progressPercentage={42} skill={"Design"} />
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

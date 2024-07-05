@@ -5,14 +5,11 @@ import Contact from "./components/Contact";
 import { useEffect, useState } from "react";
 import { HiChevronUp } from "react-icons/hi";
 import NavBar from "./components/NavBar";
-import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const homeRef = React.useRef(null);
-  const aboutRef = React.useRef(null);
-  const experentRef = React.useRef(null);
-  const contactRef = React.useRef(null);
 
   useEffect(() => {
     function updateScrollCompletion() {
@@ -54,6 +51,12 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -66,17 +69,11 @@ const App = () => {
       className="h-auto bg-cover"
       // style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <NavBar
-        visible={isVisible}
-        homeRef={homeRef}
-        aboutRef={aboutRef}
-        experentRef={experentRef}
-        contactRef={contactRef}
-      />
-      <Home homeRef={homeRef} />
-      <About aboutRef={aboutRef} />
-      <Experience experentRef={experentRef} />
-      <Contact contactRef={contactRef} />
+      <NavBar visible={isVisible} />
+      <Home />
+      <About />
+      <Experience />
+      <Contact />
       <button
         onClick={scrollToTop}
         className={`${
