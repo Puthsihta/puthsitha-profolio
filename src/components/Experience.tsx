@@ -31,12 +31,10 @@ const Experience: React.FC<props> = ({ experentRef }) => {
             </div>
             <div className="text-slate-500">
               I'm a mobile developer at <b>Digital One</b> I have develop
-              several apps with react native technology (Android & IOS) and
-              integrated with API, and bank service (ABA payment method). I able
-              to use javascript, ES6, JSX, TSX, Lifecycle with Hooks, Redux
-              (saga, toolkit), encrypt and decrypt data with API. I'm also lead
-              e-commerce project with teamwork (manage task, meeting,
-              responsible)
+              several apps with <i>React Native</i> and <i>Flutter</i>{" "}
+              technology (Android & IOS) and integrated with API. I able to use
+              typscript, Zustand (useQuery). I'm also do flutter projects and
+              buidl self api with express js typscript prisma ORM (ecommerce).
             </div>
           </div>
         </div>
